@@ -46,7 +46,7 @@ const flowExperiencia = addKeyword(['1', 'He trabajado en diversos roles como de
 ,{capture:true, delay: 500, idle: 180000},async (ctx,{gotoFlow,fallBack}) => {
     if (ctx?.idleFallBack) return gotoFlow(flowFinal)
     
-    if(!VALIDACIONES.opcionValida(ctx.body)) fallBack('Ingresa una opcion del submenú')
+    if(!VALIDACIONES.opcionValida(ctx.body)) return fallBack('Ingresa una opcion del submenú')
     
 },[flowAutomation,flowPython,flowChatbots])
 
