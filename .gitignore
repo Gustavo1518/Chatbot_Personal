@@ -1,0 +1,8 @@
+#SE IGNORA LA CARPETA NODE
+node_modules/
+
+core.class.log
+
+queue.class.log
+
+bot_sessions/
