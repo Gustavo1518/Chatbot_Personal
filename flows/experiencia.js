@@ -39,7 +39,7 @@ const flowChatbots = addKeyword(REGEX_OPCION3, {regex: true}).addAnswer('Aquí h
 
 
 
-const flowExperiencia = addKeyword(['1', 'He trabajado en diversos roles como desarrollador RPA, ¿Te gustaría ver detalles sobre alguna de estas experiencias?'])
+const flowExperiencia = addKeyword(REGEX_OPCION1, {regex:true})
 .addAnswer(
     [
         'Selecciona el *numero* de la opción que deseas consultar\n\n',
@@ -50,7 +50,7 @@ const flowExperiencia = addKeyword(['1', 'He trabajado en diversos roles como de
 ,{capture:true, delay: 500, idle: 180000},async (ctx,{gotoFlow,fallBack}) => {
     if (ctx?.idleFallBack) return gotoFlow(flowFinal)
     
-    if(!VALIDACIONES.opcionValida(ctx.body)) return fallBack('Ingresa una opcion del submenú')
+    if(!VALIDACIONES.opcionValida(ctx.body)) return fallBack('Ingresa una opcion valida del submenú')
     
 },[flowAutomation,flowPython,flowChatbots])
 

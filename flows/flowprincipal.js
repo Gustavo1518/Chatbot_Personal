@@ -7,7 +7,6 @@ const flowCotizar = require('./cotizar.js');
 const flowFinal = addKeyword(EVENTS.ACTION).addAnswer('👋 ¡Hasta luego!')
 
 
-
 const flowPrincipal = addKeyword(['hola', 'menu', 'menú'])
     .addAnswer('🙌 ¡Hola! Soy *Gustavo Meneses*, un desarrollador RPA especializado en Automation Anywhere, Python y Selenium. ¿Te gustaría conocer más sobre mi experiencia?')
     .addAnswer(' *¿En que puedo ayudarte hoy?*\n\n1️⃣ Experiencia Profesional.\n2️⃣ Habilidades Técnicas\n3️⃣ Quiero una automatización/chatbot', {capture: true, delay: 1000, idle: 180000}, (ctx, {fallBack,gotoFlow}) => {
