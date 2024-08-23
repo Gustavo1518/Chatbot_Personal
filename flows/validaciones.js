@@ -1,7 +1,7 @@
 const opcionValida = ((opcion) => {
     let msg = opcion.replace(/[a-zA-Z\s]/g, "");
     console.log(msg)
-    if(msg === '1' || msg === '2' || msg === '3') return msg;
+    if(msg === '1' || msg === '2' || msg === '3' || msg === '4') return msg;
     return false
 });
 const menuValido = (cadena) => {
